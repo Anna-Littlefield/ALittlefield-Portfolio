@@ -1,0 +1,70 @@
+/* ================================= 
+  Basic Page Styles
+==================================== */
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+{
+    box-sizing: border-box;
+}
+/* ================================= 
+  Header
+==================================== */
+
+h1, h2 {
+    color: #006548;
+}
+a {
+    font-size:1.4em;
+    padding: 20px;
+    color: #219b78;
+    text-decoration: none;
+    border-radius: 5%;
+}
+a:hover {
+    background: rgba(201, 236, 217, 0.733);
+    color: #006548;
+}
+
+/* ================================= 
+  Navigation
+==================================== */
+
+#nav {
+    list-style: none;
+}
+#nav li {
+    float: left;
+    margin-left: 20px;
+}
+
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: left;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+}
+.midbox {
+    display: flex;
+    border: 2px solid #000;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+}
+button {
+    width: 30%;
+}
