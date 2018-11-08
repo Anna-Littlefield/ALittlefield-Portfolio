@@ -2,34 +2,118 @@
   Basic Page Styles
 ==================================== */
 
-h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
+
+@-ms-viewport {
+    width: device-width;
 }
 body {
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #fff;
+    -ms-overflow-style: scrollbar;
 }
-{
-    box-sizing: border-box;
+.box {
+    color: #04438e;
+    border-radius: 4px;
+    padding: 1%;
+    font-style: italic;
 }
+
+.logotext {
+    font-size: 38px;
+    line-height: 40px;
+}
+.item {
+	color: #fff;
+	padding: 15px;
+	margin: 5px;	
+	background: #3db5da;
+	border-radius: 3px;
+}
+.label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 200;
+    margin: 0 0 1em 0;
+}
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    color: #04438e;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 1em 0 0;
+    list-style: none;
+}
+
+    ul.icons li:last-child {
+        padding-right: 0;
+    }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+h2 {
+    text-align: left;
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+    color: #04438e;
+} 
 /* ================================= 
   Header
 ==================================== */
 
-h1, h2 {
-    color: #006548;
+#header {
+    float: inherit;
+    margin-top: 10rem ;
+    width: 90%;
+  }
+.header-container{
+    padding: 5% 5% 0 5%;
+    background-color: #fff;
 }
-a {
-    font-size:1.4em;
+.wrapper {
+    margin: 0 auto;
+    background-color: #fff;
+    width: 95%;
+}
+h1 {
+    font-size: 2em;
+    float: left;
+    margin: 0;
     padding: 20px;
-    color: #219b78;
+    /* text-indent: 800px; */
+    line-height: 2.75em;
+    width: 300px;
+    height: 140px;
+    background: url('../img/ALDesignLogo.png') top left no-repeat;
+    color: #04438e;
+}
+ 
+a {
+    color: #04438e;
     text-decoration: none;
     border-radius: 5%;
 }
 a:hover {
-    background: rgba(201, 236, 217, 0.733);
-    color: #006548;
+    color: #efa26f;
 }
+
 
 /* ================================= 
   Navigation
@@ -37,11 +121,168 @@ a:hover {
 
 #nav {
     list-style: none;
+    font-size:1.4em;
+    padding: 20px;
+    float: right;
 }
 #nav li {
     float: left;
-    margin-left: 20px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    list-style: none;
 }
+
+#nav {
+    display: inline-block;
+}
+    /* @media screen and (max-width: 980px) {
+        #nav {
+            display: none;
+        }
+    } */
+
+.Navbar {
+    position: absolute;
+    text-decoration: none;
+    right: 2em;
+    top: .75em;
+    z-index: 10002;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+    color: #04438e;
+    background: rgba(255, 255, 255, 0.829);
+    font-size: 16px;
+    height: 8em;
+    line-height: 2.25em;
+    }
+.NavbarLink {
+    padding-right: 0;
+    }
+.NavbarItems {
+    display: flex;
+    }
+.NavbarLink-toggle {
+    display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+    .NavbarItems,
+    .Navbar {
+        flex-direction: column;
+        right: 1em;
+        top: .5em;
+    }
+    .NavbarItems {
+        display: none;
+    }
+    .NavbarToggleShow {
+        display: flex;
+    }
+    .NavbarLink-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+        } 
+    }
+
+/* ================================= 
+  Thumbnails
+==================================== */
+
+section {
+    display: block;
+}
+.thumbnails {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+    margin: 0 0 2em -2em;
+}
+    .thumbnails a {
+        -moz-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        border-bottom: none;
+        display: block;
+        width: 100%;
+        margin: 0 0 2em 0;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+        background-color:rgba(240, 240, 240, 0.575);
+        cursor: pointer;
+        outline: 0;
+        overflow: hidden;
+    }
+        .thumbnails a img {
+            display: block;
+            width: 100%;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        .thumbnails a h3 {
+            margin: 1em;
+        }
+        .thumbnails a:hover {
+            background-color: #8cafda49; 
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #bdbdbd81;
+        }
+    .thumbnails > div {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: calc(100% / 3);
+        padding-left: 2em;
+    }
+        .thumbnails > div > :last-child {
+            margin-bottom: 0;
+        }
+/* Image */
+
+.image {
+    border-radius: 4px;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}
+
+    .image img {
+        border-radius: 4px;
+        display: block;
+    }
+
+    .image.left, .image.right {
+        max-width: 40%;
+    }
+
+        .image.left img, .image.right img {
+            width: 100%;
+        }
+
+    .image.main {
+        display: block;
+        margin: 0 0 3em 0;
+        width: 100%;
+    }
+
+        .image.main img {
+            width: 100%;
+        }
 
 /* ================================= 
   Flexbox
@@ -50,21 +291,176 @@ a:hover {
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin: left;
+    margin: auto;
+    justify-content: space-between;
+    border-radius: 5px;
 }
-.nav {
+
+button {
+    width: 100%;
+}
+
+/* ================================= 
+  Contact Form
+==================================== */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid white; /* white border */
+    border-radius: 4px; /* Rounded borders */
+    background-color: #f2f2f2;
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Submit button */
+input[type=submit] {
+    background-color: #efa26f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:100%;
+    padding:10px 45px;
+    font-size:18px;
+    font-weight:700;
+}
+input[type=submit]:hover {
+    background-color: #e07d3b;
+}
+
+.container {
     display: flex;
     flex-wrap: wrap;
-    align-self: flex-end;
+    justify-content: center;
+    border-radius: 0;
+    background-color: white;
 }
-.midbox {
-    display: flex;
-    border: 2px solid #000;
-    width: 100%;
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 20px;
+
+/* Icon */
+
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
 }
-button {
-    width: 30%;
+
+    .icon:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none !important;
+    }
+
+    .icon > .label {
+        display: none;
+    }
+
+    .icon.style2 {
+        -moz-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        border-radius: 100%;
+        display: inline-block;
+        padding: 0.5em;
+        border: solid 1px rgba(255, 255, 255, 0.25);
+        background-color: rgba(255, 255, 255, 0.075);
+    }
+
+        .icon.style2:before {
+            display: block;
+            width: 1.25em;
+            height: 1.25em;
+            line-height: 1.25em;
+            font-size: 1.6em;
+        }
+
+        .icon.style2:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        @media screen and (max-width: 736px) {
+
+            .icon.style2:before {
+                font-size: 1.4em;
+            }
+
+        }
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media screen and (max-width: 1280px) {
+
+    .thumbnails {
+        margin: 0 0em 1em -2.5em;
+    }
+
+        .thumbnails a {
+            margin: 0 0 1.5em 0;
+        }
+
+        .thumbnails > div {
+            padding-left: 1.5em;
+        }
+
 }
+
+@media screen and (max-width: 980px) {
+
+    .thumbnails h3 {
+        font-size: 0.8em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    html, body {
+        min-width: 320px;
+    }
+    header,
+    #nav,
+    .header-container {
+        padding: 1em 1em 0 1em;
+        line-height: 2em;
+        justify-content: center;
+      }
+  
+    .thumbnails {
+        display: block;
+    }
+
+        .thumbnails a {
+            margin: 0 0 2em 0;
+        }
+
+        .thumbnails > div {
+            display: block;
+            width: 100%;
+        }
+
+            .thumbnails > div:last-child > :last-child {
+                margin-bottom: 0 !important;
+            }
+
+        .thumbnails h4 {
+            font-size: 1.2em;
+        }
+
+}
+/* Footer */
+
+	#footer {
+		text-align: center;
+		padding: 2em 0 2em 0;
+	}
+

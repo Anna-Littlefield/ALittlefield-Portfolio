@@ -1,13 +1,13 @@
 alert('connected');
 
-var redButton = document.querySelector('#red');
-var blueButton = document.querySelector('#blue');
-var greenButton = document.querySelector('#green');
 
-redButton.addEventListener('click', function(){
-    alert('button clicked');
-    changeColor = 'red';
-})
-function changeColor(color){
-    document.body.style.backgroundColor = color;
-})
+function classToggle() {
+  const navs = document.querySelectorAll('.NavbarItems')
+  
+  navs.forEach(nav => nav.classList.toggle('NavbarToggleShow'));
+}
+document.querySelector('.NavbarLink-toggle')
+  .addEventListener('click', classToggle);
+
+
+  
