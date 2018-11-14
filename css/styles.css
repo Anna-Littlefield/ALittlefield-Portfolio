@@ -68,12 +68,18 @@ h2 {
     text-align: left;
     font-size: 15px;
     line-height: 35px;
-    font-weight: lighter;
     font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #04438e;
 }
 h4 {
     color: #04438e;
 } 
+p {
+    font-size: 11pt;
+    font-weight: lighter;
+}
+
 /* ================================= 
   Header
 ==================================== */

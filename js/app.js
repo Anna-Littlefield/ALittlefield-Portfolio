@@ -1,5 +1,3 @@
-alert('connected');
-
 
 function classToggle() {
   const navs = document.querySelectorAll('.NavbarItems')
